@@ -1,7 +1,11 @@
 <h1>Articles</h1>
 
-<% @articles.each do |article| %>
-  <ul>
-    <li><%= article.title %>
-  </ul>
-<% end %>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="/articles/<%= article.id %>" class='article-title'><%= article.title %></a>
+    </li>
+  <% end %>
+</ul>
+
+<a class='new-article' href="/articles/new">Create a New Article</a>
